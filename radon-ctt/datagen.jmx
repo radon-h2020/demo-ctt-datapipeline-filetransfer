@@ -54,9 +54,9 @@ import com.amazonaws.services.s3.transfer.Download;
 import com.amazonaws.services.s3.transfer.TransferManager;
 import com.amazonaws.services.s3.transfer.TransferManagerBuilder;
 import com.amazonaws.services.s3.transfer.Upload;
-String bucketName = &quot;radon-utr-thumbgen1&quot;;
+String bucketName = &quot;radonbucket&quot;;
 String objectName = &quot;image&quot;;
-String region = &quot;eu-north-1&quot;;
+String region = &quot;us-east-1&quot;;
 ArrayList list1 = new ArrayList(); 
 Scanner k = new Scanner(new File(&quot;/mnt/aws.txt&quot;)); //path to txt file
 while (k.hasNextLine()){
@@ -176,7 +176,7 @@ xfer_mgr.shutdownNow();
         <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
           <doubleProp>
             <name>throughput</name>
-            <value>10.0</value>
+            <value>5.0</value>
             <savedValue>0.0</savedValue>
           </doubleProp>
           <intProp name="calcMode">0</intProp>
