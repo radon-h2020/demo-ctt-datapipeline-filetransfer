@@ -55,7 +55,6 @@ import com.amazonaws.services.s3.transfer.TransferManager;
 import com.amazonaws.services.s3.transfer.TransferManagerBuilder;
 import com.amazonaws.services.s3.transfer.Upload;
 String bucketName = &quot;radonbucket&quot;;
-String objectName = &quot;image&quot;;
 String region = &quot;us-east-1&quot;;
 ArrayList list1 = new ArrayList(); 
 Scanner k = new Scanner(new File(&quot;/mnt/aws.txt&quot;)); //path to txt file
@@ -79,7 +78,7 @@ TransferManager xfer_mgr = TransferManagerBuilder.standard()
 File f = new File(args[0]);
 int index = args[0].lastIndexOf(&quot;/&quot;);
 String fileName = args[0].substring(index + 1);
-String obj = 	objectName + fileName; 
+String obj = 	fileName; 
 Upload xfer = xfer_mgr.upload(bucketName, obj, f);	
 xfer.waitForCompletion();	
 xfer_mgr.shutdownNow();
